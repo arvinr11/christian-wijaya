@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: #000;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+  
+.title h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+  
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+  
+.nav-item {
+    cursor: pointer;
+    color: #7F898C;
+    text-decoration: none;
+}
+  
+.nav-item:hover {
+    color: #000;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 15px; 
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+  
+/* Hero Section */
+.image-container {
+    position: relative;
+}
+  
+.image-container img {
+    width: 100%;
+    display: block;
+    height: auto;
+} 
+
+.text-overlay {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Video Trailer */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 42.85%;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Apparel */
+.apparel {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+.apparel h3 {
+    font-size: 24px;
+}
+
+/* Accessories */
+.accessories {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+.accessories h3 {
+    font-size: 24px;
+}
+
+/* Footwear */  
+.footwear {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+.footwear h3 {
+    font-size: 24px;
+}
+
+/* Product */
+.product {
+    display: inline-block;
+    margin: 24px;
+    width: 250px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit
+}
+  
+.product:hover {
+    transform: translateY(-10px);
+}
+  
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+.name {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.price {
+    color: #7F898C;
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    margin-top: 60px;
+}
+  
+.footer h2 {
+    color: #fff;
+    padding-left: 40px;
+}
+
+.footer h3 {
+    color: #fff;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.social-media a {
+    color: #7F898C;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #fff;
+}
+
+.quick-links a {
+    display: flex;
+    flex-direction: column; 
+    color: #7F898C;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #7F898C;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    /* Navigation Bar */
+    nav {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }    
+    
+    .title {
+        margin-right: auto; 
+    }
+    
+    .title h1 {
+        font-size: 20px;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 999;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex; 
+    }
+    
+    .nav-item {
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    /* Hero Section */
+    .image-container img {
+    height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .text-overlay {
+        font-size: 24px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    .apparel h3,
+    .accessories h3,
+    .footwear h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .apparel,
+    .accessories,
+    .footwear {
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .product {
+        width: 90%; 
+        max-width: 300px;
+        margin: 15px auto;
+        padding: 12px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    .price {
+        font-size: 14px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 15px 15px 15px;
+    }
+
+    .footer h2 {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .social-media, .quick-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .quick-links a {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
