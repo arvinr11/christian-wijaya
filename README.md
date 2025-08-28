@@ -34,8 +34,8 @@ A modern, responsive website for Christian Wijaya luxury fashion brand built wit
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 
 ## 🎨 Pages
